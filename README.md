@@ -20,6 +20,8 @@ Eg.
 
 ![Selection Sort Results Image](https://github.com/harman-brar/SortVisualizer/blob/master/assets/readme_sel_sort.png?raw=true)
 
+If not specified, only the resultant array will be shown
+
 
 ## Further Information
 
