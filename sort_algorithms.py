@@ -33,8 +33,8 @@ def selection_sort(vals_to_sort, isVerbose):
     for i in range (0, arr_len-1):
         curr_min = i;
         for j in range(i+1, arr_len):
-            print_util.highlightStep(vals_to_sort, curr_min, j, isVerbose, False);
-            print_util.unHighlightStep(vals_to_sort, curr_min, j, isVerbose, False);
+            print_util.highlightStep(vals_to_sort, i, j, isVerbose, False);
+            print_util.unHighlightStep(vals_to_sort, i, j, isVerbose, False);
             
             if vals_to_sort[j] < vals_to_sort[curr_min]:
                 curr_min = j;
