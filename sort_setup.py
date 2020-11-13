@@ -4,13 +4,14 @@ import print_util;
 
 args = sys.argv;
 
-vals_to_sort = [arg for arg in args];
-del vals_to_sort[0];
-sort_type = vals_to_sort.pop(0);
+del args[0];
+sort_type = args.pop(0);
 
-isVerbose = vals_to_sort[0] == '-v';
+isVerbose = args[0] == '-v';
 if isVerbose:
-    del vals_to_sort[0];
+    del args[0];
+
+vals_to_sort = args
 
 def parseInt(n):
     return int(n);
