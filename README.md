@@ -10,6 +10,6 @@ Eg. python sort_setup.py bubble_sort 3 2 1 4 22 10 34
 ## Displaying steps
 Steps taken by the algorithms can be displayed by setting the verbose flag "-v"
 
-Eg. python sort_setup.py selection_sort -v 3 2 1 4
+Eg. **python sort_setup.py selection_sort -v 3 2 1 4**
 
-![Selection Sort Results Image](https://github.com/harman-brar/SortVisualizer/assets/readme_sel_sort.png?raw=true)
+![Selection Sort Results Image](https://github.com/harman-brar/SortVisualizer/blob/master/assets/readme_sel_sort.png?raw=true)
