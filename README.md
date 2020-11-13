@@ -21,3 +21,9 @@ Eg.
 ![Selection Sort Results Image](https://github.com/harman-brar/SortVisualizer/blob/master/assets/readme_sel_sort.png?raw=true)
 
 
+## Further Information
+
+**Asterisk**: * n *, where n is an element of the array, means it is a subject of the current step
+
+**Directional arrow**: n -> or <- n indicates a swap at the current step and the direction in which the element is going to be moved
+
