@@ -47,3 +47,6 @@ def selection_sort(vals_to_sort, isVerbose):
     print "Result: ", vals_to_sort;
     print_util.printBlankLine();
     print ("END_SELECTION_SORT");
+
+def insertion_sort(vals_to_sort, isVerbose):
+    pass

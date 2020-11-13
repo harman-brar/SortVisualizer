@@ -26,7 +26,8 @@ def unHighlightStep(vals_to_sort, l, r, isVerbose, isSwap=True):
 def complexityReport(sort_type):
     switcher = {
         'bubble_sort': "O(n^2) time | O(1) space",
-        'selection_sort': "O(n^2) time | O(1) space"
+        'selection_sort': "O(n^2) time | O(1) space",
+        'insertion_sort': "O(n^2) time | O(1) space"
     };
 
     print "==================|   Complexity Report:   " + switcher[sort_type] + "     |==================";
