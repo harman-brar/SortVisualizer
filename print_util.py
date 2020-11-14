@@ -1,6 +1,8 @@
 def highlightStep(vals_to_sort, l, r, isVerbose, isSwap=True):
     if not isVerbose:
         return;
+    if l == r:
+        return;
 
     if isSwap:
         vals_to_sort[l] = str(vals_to_sort[l]) + " ->";
@@ -13,6 +15,8 @@ def highlightStep(vals_to_sort, l, r, isVerbose, isSwap=True):
 def unHighlightStep(vals_to_sort, l, r, isVerbose, isSwap=True):
     """ Orginal l and r are now swapped """
     if not isVerbose:
+        return;
+    if l == r:
         return;
 
     if isSwap:
@@ -28,22 +32,36 @@ def complexityReport(sort_type):
         'bubble_sort': "O(n^2) time | O(1) space",
         'selection_sort': "O(n^2) time | O(1) space",
         'insertion_sort': "O(n^2) time | O(1) space",
-        'merge_sort': "O(nlogn) time | O(n) space"
+        'merge_sort': "O(nlogn) time | O(n) space",
+        'quick_sort': "Worst: O(n^2), Avg: O(nlogn) time | O(logn) space"
     };
 
-    print "==================|   Complexity Report:   " + switcher[sort_type] + "     |==================";
+    print "==================|   Complexity Report:   " + switcher[sort_type] + "     |==================\n";
 
-def printBlankLine():
+def printBlankLine(isVerbose):
+    if not isVerbose:
+        return;
     print "\n";
 
-def printResult(sorted_array):
-    printBlankLine();
-    print "Result: ", sorted_array;
-    printBlankLine();
+def gap():
+    print "";
 
-def printSeparation():
+def printResult(sorted_array):
+    gap();
+    print "Result: ", sorted_array;
+    gap();
+
+def printSeparation(isVerbose):
+    if not isVerbose:
+        return;
     print "----------------------------"
 
-def printIterator(i):
+def printIterator(i, isVerbose):
+    if not isVerbose:
+        return;
     print "i = " + str(i);
-    printSeparation();
+    printSeparation(isVerbose);
+
+def printIfVerbose(str, isVerbose):
+    if isVerbose:
+        print str;

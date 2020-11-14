@@ -22,7 +22,8 @@ switcher = {
     'bubble_sort': sort_algorithms.bubble_sort,
     'selection_sort': sort_algorithms.selection_sort,
     'insertion_sort': sort_algorithms.insertion_sort,
-    'merge_sort': sort_algorithms.merge_sort
+    'merge_sort': sort_algorithms.merge_sort,
+    'quick_sort': sort_algorithms.quick_sort
 };
 
 sort_fn = switcher[sort_type];
