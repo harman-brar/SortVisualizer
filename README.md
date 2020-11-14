@@ -10,6 +10,15 @@ Eg.
 
     python sort_setup.py bubble_sort 3 2 1 4 6 1 8
    
+## Supported Algorithms
+```
+    bubble_sort
+    selection_sort
+    insertion_sort
+    merge_sort
+    quick_sort
+    heap_sort
+```
 
 ## Displaying steps
 Steps taken by the algorithms can be displayed by setting the verbose flag "-v"
