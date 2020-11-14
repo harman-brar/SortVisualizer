@@ -174,3 +174,51 @@ def partition(arr, low, high, isVerbose):
     swap(arr, i+1, high);
     print_util.unHighlightStep(arr, i+1, high, isVerbose);
     return i+1; 
+
+def heap_sort(vals_to_sort, isVerbose):
+    print("\nHeapSort leverages the power of a heap to sort. \nInternally, the heap is represented as an array. \nFor each element in the array, we sort it by heapifying until it has found it's correct position. \nThis process takes O(logn) time for each of the n elements of the input array.");
+    print_util.gap();
+    
+    print "START_HEAP_SORT: ", vals_to_sort;
+    print_util.gap();
+
+    heap_recurse(vals_to_sort, isVerbose);
+
+    print_util.printResult(vals_to_sort);
+    print "END_HEAP_SORT";
+
+def heap_recurse(arr, isVerbose):
+    n = len(arr);
+
+    # building maxHeap
+    for i in range(n//2 - 1, -1, -1): 
+        heapify(arr, n, i, isVerbose) 
+
+    for i in range(n-1, 0, -1): 
+        print_util.highlightStep(arr, 0, i, isVerbose);
+        swap(arr, i, 0);
+        print_util.unHighlightStep(arr, 0, i, isVerbose);
+        heapify(arr, i, 0, isVerbose) 
+
+def heapify(arr, n, i, isVerbose): 
+    largest = i  ;   # root
+    l = 2 * i + 1;   # left child
+    r = 2 * i + 2;   # right child
+    
+    print_util.printSeparation(isVerbose);
+    print_util.printIfVerbose("Index of Largest: " + str(largest), isVerbose);
+    print_util.printIfVerbose("Index of Left Child: " + str(l), isVerbose);
+    print_util.printIfVerbose("Index of Right Child: " + str(r), isVerbose);
+    print_util.printBlankLine(isVerbose);
+
+    if l < n and arr[i] < arr[l]:
+        largest = l;
+  
+    if r < n and arr[largest] < arr[r]:
+        largest = r; 
+  
+    if largest != i:
+        print_util.highlightStep(arr, i, largest, isVerbose); 
+        swap(arr, i, largest);
+        print_util.unHighlightStep(arr, i, largest, isVerbose);
+        heapify(arr, n, largest, isVerbose) 

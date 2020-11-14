@@ -33,7 +33,8 @@ def complexityReport(sort_type):
         'selection_sort': "O(n^2) time | O(1) space",
         'insertion_sort': "O(n^2) time | O(1) space",
         'merge_sort': "O(nlogn) time | O(n) space",
-        'quick_sort': "Worst: O(n^2), Avg: O(nlogn) time | O(logn) space"
+        'quick_sort': "Worst: O(n^2), Avg: O(nlogn) time | O(logn) space",
+        'heap_sort': "O(nlogn) time | O(1) space"
     };
 
     print "==================|   Complexity Report:   " + switcher[sort_type] + "     |==================\n";
