@@ -27,10 +27,23 @@ def complexityReport(sort_type):
     switcher = {
         'bubble_sort': "O(n^2) time | O(1) space",
         'selection_sort': "O(n^2) time | O(1) space",
-        'insertion_sort': "O(n^2) time | O(1) space"
+        'insertion_sort': "O(n^2) time | O(1) space",
+        'merge_sort': "O(nlogn) time | O(n) space"
     };
 
     print "==================|   Complexity Report:   " + switcher[sort_type] + "     |==================";
 
 def printBlankLine():
     print "\n";
+
+def printResult(sorted_array):
+    printBlankLine();
+    print "Result: ", sorted_array;
+    printBlankLine();
+
+def printSeparation():
+    print "----------------------------"
+
+def printIterator(i):
+    print "i = " + str(i);
+    printSeparation();
